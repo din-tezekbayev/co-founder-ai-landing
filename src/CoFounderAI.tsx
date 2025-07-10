@@ -265,15 +265,6 @@ const CoFounderAI = () => {
         
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
-            <div className="inline-block bg-blue-600 rounded-full px-4 py-2 mb-6">
-              <div className="flex items-center space-x-2">
-                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-sm font-bold font-montserrat">BS</div>
-                <div className="text-sm font-inter">
-                  <div className="font-semibold">@bernarsaparali</div>
-                  <div className="opacity-80">2440 подписчиков</div>
-                </div>
-              </div>
-            </div>
             <h2 className="text-4xl font-black mb-4 font-montserrat text-white">
               Устали? Хотите больше денег<br />но по факту получаете это...
             </h2>
@@ -484,22 +475,6 @@ const CoFounderAI = () => {
         </div>
         
         <div className="max-w-4xl mx-auto px-4 text-center relative z-10">
-          {/* Profile section like in reference */}
-          <div className="mb-12">
-            <div className="inline-flex items-center bg-blue-600 rounded-2xl p-6 text-left">
-              <div className="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center text-xl font-bold font-montserrat mr-6">
-                BS
-              </div>
-              <div>
-                <div className="text-lg font-bold font-montserrat">@bernarsaparali</div>
-                <div className="text-sm opacity-80 font-inter">2440 подписчиков</div>
-                <div className="text-sm mt-2 max-w-xs font-inter">
-                  Каждый из вас находится на одном из этапов ниже, 
-                  <span className="font-semibold"> после обучения вы перейдете на следующий</span>
-                </div>
-              </div>
-            </div>
-          </div>
           
           <h2 className="text-4xl font-black mb-6 font-montserrat">
             Готовы масштабировать бизнес<br />
