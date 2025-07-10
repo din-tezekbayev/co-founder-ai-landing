@@ -386,62 +386,6 @@ const CoFounderAI = () => {
         </div>
       </section>
 
-      {/* Results Section */}
-      <section id="section-results" className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Результаты клиентов</h2>
-            <p className="text-xl text-gray-600">Говорят те, кто уже работал со мной</p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 text-center shadow-lg hover:shadow-xl transition-shadow">
-                <div className="relative mb-6">
-                  <img 
-                    src={testimonial.image} 
-                    alt={testimonial.name}
-                    className="w-20 h-20 rounded-full mx-auto mb-4 object-cover border-4 border-gray-100"
-                  />
-                  {/* Verified badge */}
-                  <div className="absolute -top-2 -right-2 bg-blue-600 rounded-full p-1">
-                    <Check className="w-4 h-4 text-white" />
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{testimonial.name}</h3>
-                <p className="text-blue-600 font-medium mb-2">{testimonial.handle}</p>
-                <p className="text-sm text-gray-500 mb-6">{testimonial.followers} подписчиков</p>
-                
-                <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-xl p-6 mb-4">
-                  <div className="text-sm text-gray-600 mb-2">Точка Б:</div>
-                  <div className="text-3xl font-bold text-green-600 mb-2">{testimonial.revenue}</div>
-                  <div className="text-sm text-gray-600">Выручка за запуск</div>
-                </div>
-                
-                <button className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
-                  Читать подробнее →
-                </button>
-              </div>
-            ))}
-          </div>
-          
-          {/* Video testimonial preview */}
-          <div className="mt-16 text-center">
-            <div className="bg-gray-900 rounded-2xl p-8 text-white inline-block">
-              <div className="flex items-center justify-center mb-4">
-                <div className="bg-white/20 rounded-full p-4 mr-4">
-                  <Play className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-left">
-                  <div className="text-lg font-bold">2 минут</div>
-                  <div className="text-sm opacity-80">350.000.000 ₸ на запусках за 1 месяц</div>
-                  <div className="text-sm opacity-60">Ученик: Бернар Сапарали</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Benefits Section */}
       <section className="py-20 bg-gray-50">
