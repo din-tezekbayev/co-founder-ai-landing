@@ -41,29 +41,6 @@ const CoFounderAI = () => {
     return () => observer.disconnect();
   }, []);
 
-  const testimonials = [
-    {
-      name: "Талгат Итаев",
-      handle: "@t.itayev",
-      followers: "580 тыс.",
-      revenue: "80.000.000 ₸",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48' fill='%236b7280'%3ETI%3C/text%3E%3C/svg%3E"
-    },
-    {
-      name: "Бейбит Алибеков", 
-      handle: "@alibekovkz",
-      followers: "1,5 млн",
-      revenue: "80.000.000 ₸",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48' fill='%236b7280'%3EBA%3C/text%3E%3C/svg%3E"
-    },
-    {
-      name: "Ким Кирилл",
-      handle: "@k1m.kirill",
-      followers: "350 тыс.",
-      revenue: "8.000.000 ₸",
-      image: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='150' height='150' viewBox='0 0 150 150'%3E%3Crect width='150' height='150' fill='%23f3f4f6'/%3E%3Ctext x='50%25' y='50%25' dominant-baseline='middle' text-anchor='middle' font-size='48' fill='%236b7280'%3EKK%3C/text%3E%3C/svg%3E"
-    }
-  ];
 
   const stats = [
     { number: "2x", label: "Рост продаж за 2 месяца", icon: TrendingUp },
