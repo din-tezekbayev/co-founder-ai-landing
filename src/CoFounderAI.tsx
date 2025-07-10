@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Play, Check, Users, TrendingUp, Zap, Target, Bot, Rocket } from 'lucide-react';
-import fancyBrainImage from '/src/assets/images/fansy-brain.png';
+import fancyBrainImage from './assets/images/fansy-brain.png';
 
 // Load Google Fonts
 const FontLoader = () => {
