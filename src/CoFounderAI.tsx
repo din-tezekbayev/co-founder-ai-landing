@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Play, Check, Users, TrendingUp, Zap, Target, Bot, Rocket } from 'lucide-react';
+import fancyBrainImage from '/src/assets/images/fansy-brain.png';
 
 // Load Google Fonts
 const FontLoader = () => {
@@ -138,10 +139,10 @@ const CoFounderAI = () => {
             <span className="text-xl font-bold text-gray-900 font-montserrat">CoFounder AI</span>
           </div>
           <nav className="hidden md:flex space-x-8">
-            <a href="#problems" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">Проблемы</a>
-            <a href="#solution" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">Решение</a>
-            <a href="#results" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">Результаты</a>
-            <a href="#pricing" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">Цены</a>
+            <a href="#section-problems" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">Проблемы</a>
+            <a href="#section-solution" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">Решение</a>
+            <a href="#section-results" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">Результаты</a>
+            <a href="#section-pricing" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">Цены</a>
           </nav>
           <button className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
             Консультация
@@ -171,11 +172,14 @@ const CoFounderAI = () => {
         </div>
         
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
-            <div className="text-left">
+          <div className="flex flex-col items-center justify-center text-center min-h-[80vh]">
+            {/* Main Content */}
+            <div className="max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 leading-tight font-montserrat">
-                Увеличить продажи<br />
+                <span className="text-3xl md:text-6xl font-black text-gray-900 mb-6 leading-tight font-montserrat">
+                  Увеличить продажи
+                </span>
+                <br />
                 <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                   в 2 раза за 2 месяца
                 </span>
@@ -184,24 +188,8 @@ const CoFounderAI = () => {
                 Мы берем полностью отделы продаж и маркетинга на себя
               </p>
               
-              {/* Trust indicator */}
-              <div className="flex items-center mb-8 space-x-6">
-                <div className="flex items-center space-x-2 bg-blue-50 px-4 py-2 rounded-full">
-                  <div className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-sm font-bold font-montserrat">BS</div>
-                  <div className="text-sm font-inter">
-                    <div className="font-semibold text-gray-900">@bernarsaparali</div>
-                    <div className="text-gray-600">2440 подписчиков</div>
-                  </div>
-                </div>
-                <div className="text-sm text-gray-600 font-inter">
-                  Каждый из вас находится<br />
-                  на одном из этапов ниже,<br />
-                  <span className="font-semibold text-blue-600">после обучения вы<br />
-                  перейдете на следующий</span>
-                </div>
-              </div>
               
-              <div className="flex flex-col sm:flex-row gap-4 items-start">
+              <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
                 <button className="bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-700 transition-all transform hover:scale-105 font-montserrat">
                   Хочу результата
                 </button>
@@ -210,50 +198,55 @@ const CoFounderAI = () => {
                   <span>Посмотреть как это работает</span>
                 </button>
               </div>
-            </div>
-            
-            {/* Right Content - AI Brain Visual */}
-            <div className="relative flex justify-center lg:justify-end">
-              <div className="relative">
-                {/* Main AI Brain - Using the actual holographic brain */}
-                <div className="w-80 h-80 relative flex items-center justify-center">
-                  {/* Placeholder for the holographic brain image */}
-                  <div className="w-64 h-64 relative">
-                    {/* This is where you'll replace with your actual brain image */}
-                    <div className="w-full h-full bg-gradient-to-br from-purple-500 via-blue-500 to-pink-500 opacity-80 rounded-full blur-sm animate-pulse"></div>
-                    <div className="absolute inset-4 bg-gradient-to-br from-purple-600 via-blue-600 to-pink-600 opacity-70 rounded-full blur-xs animate-pulse"></div>
+              
+              {/* Centered AI Brain Visual */}
+              <div className="relative flex justify-center mt-12">
+                <div className="relative">
+                  {/* Main AI Brain - Using the actual holographic brain */}
+                  <div className="w-96 h-96 relative flex items-center justify-center">
+                    {/* Placeholder for the holographic brain image */}
+                    <div className="w-80 h-80 relative">
+                      {/* This is where you'll replace with your actual brain image */}
+                      <div className="w-full h-full bg-gradient-to-br from-purple-500 via-blue-500 to-pink-500 opacity-80 rounded-full blur-sm animate-pulse"></div>
+                      <div className="absolute inset-4 bg-gradient-to-br from-purple-600 via-blue-600 to-pink-600 opacity-70 rounded-full blur-xs animate-pulse"></div>
+                      
+                      {/* Brain image */}
+                      <div className="absolute inset-0 flex items-center justify-center">
+                        <img 
+                          id="brain"
+                          src={fancyBrainImage} 
+                          alt="AI Brain" 
+                          className="w-full h-full object-contain" 
+                        />
+                      </div>
+                    </div>
                     
-                    {/* Brain shape overlay - replace this entire div with: <img src="your-brain-image.png" alt="AI Brain" className="w-full h-full object-contain" /> */}
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-8xl opacity-90">🧠</div>
+                    {/* Floating AI elements */}
+                    <div className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg animate-bounce">
+                      <Bot className="w-6 h-6 text-blue-600" />
+                    </div>
+                    <div className="absolute -bottom-4 -left-4 bg-white rounded-full p-3 shadow-lg animate-bounce" style={{animationDelay: '0.5s'}}>
+                      <Target className="w-6 h-6 text-purple-600" />
+                    </div>
+                    <div className="absolute top-1/2 -right-8 bg-white rounded-full p-3 shadow-lg animate-bounce" style={{animationDelay: '1s'}}>
+                      <Rocket className="w-6 h-6 text-pink-600" />
                     </div>
                   </div>
                   
-                  {/* Floating AI elements */}
-                  <div className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg animate-bounce">
-                    <Bot className="w-6 h-6 text-blue-600" />
-                  </div>
-                  <div className="absolute -bottom-4 -left-4 bg-white rounded-full p-3 shadow-lg animate-bounce" style={{animationDelay: '0.5s'}}>
-                    <Target className="w-6 h-6 text-purple-600" />
-                  </div>
-                  <div className="absolute top-1/2 -right-8 bg-white rounded-full p-3 shadow-lg animate-bounce" style={{animationDelay: '1s'}}>
-                    <Rocket className="w-6 h-6 text-pink-600" />
-                  </div>
-                </div>
-                
-                {/* Orbital elements */}
-                <div className="absolute inset-0 animate-spin" style={{animationDuration: '20s'}}>
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-                  </div>
-                  <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4">
-                    <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
-                  </div>
-                  <div className="absolute top-1/2 right-0 transform translate-x-4 -translate-y-1/2">
-                    <div className="w-3 h-3 bg-pink-400 rounded-full animate-pulse"></div>
-                  </div>
-                  <div className="absolute top-1/2 left-0 transform -translate-x-4 -translate-y-1/2">
-                    <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                  {/* Orbital elements */}
+                  <div className="absolute inset-0 animate-spin" style={{animationDuration: '20s'}}>
+                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
+                      <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                    </div>
+                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4">
+                      <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
+                    </div>
+                    <div className="absolute top-1/2 right-0 transform translate-x-4 -translate-y-1/2">
+                      <div className="w-3 h-3 bg-pink-400 rounded-full animate-pulse"></div>
+                    </div>
+                    <div className="absolute top-1/2 left-0 transform -translate-x-4 -translate-y-1/2">
+                      <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -262,22 +255,6 @@ const CoFounderAI = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-16 bg-gray-900">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            {stats.map((stat, index) => (
-              <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 rounded-lg mb-4">
-                  <stat.icon className="w-6 h-6 text-white" />
-                </div>
-                <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-gray-400">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Problems Section */}
       <section id="section-problems" className="py-20 bg-gray-900 text-white relative overflow-hidden">
@@ -397,6 +374,23 @@ const CoFounderAI = () => {
                 </ul>
               </div>
             ))}
+          </div>
+          
+          {/* Stats Section */}
+          <div className="mt-16 py-16 bg-gray-900 rounded-2xl">
+            <div className="max-w-6xl mx-auto px-8">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+                {stats.map((stat, index) => (
+                  <div key={index} className="text-center">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 rounded-lg mb-4">
+                      <stat.icon className="w-6 h-6 text-white" />
+                    </div>
+                    <div className="text-3xl font-bold text-white mb-2">{stat.number}</div>
+                    <div className="text-gray-400">{stat.label}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -567,7 +561,7 @@ const CoFounderAI = () => {
             </div>
           </div>
           <div className="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-            <p>&copy; 2024 CoFounder AI. Все права защищены.</p>
+            <p>&copy; 2025 CoFounder AI. Все права защищены.</p>
           </div>
         </div>
       </footer>
