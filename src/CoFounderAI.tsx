@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronDown, Play, Check, Star, Users, TrendingUp, Zap, Target, Bot, Rocket } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Play, Check, Users, TrendingUp, Zap, Target, Bot, Rocket } from 'lucide-react';
 
 // Load Google Fonts
 const FontLoader = () => {
@@ -20,8 +20,7 @@ const FontLoader = () => {
 };
 
 const CoFounderAI = () => {
-  const [isVisible, setIsVisible] = useState({});
-  const [activeTab, setActiveTab] = useState('problems');
+  const [, setIsVisible] = useState<Record<string, boolean>>({});
 
   useEffect(() => {
     const observer = new IntersectionObserver(

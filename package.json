@@ -1,6 +1,7 @@
 {
   "name": "co-founder-ai-landing",
   "version": "1.0.0",
+  "type": "module",
   "description": "Landing page for CoFounder AI - AI-powered business automation platform",
   "main": "src/index.tsx",
   "scripts": {
