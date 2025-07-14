@@ -2,8 +2,6 @@
 export interface LeadData {
   name: string;
   phone: string;
-  company: string;
-  message: string;
   timestamp: string;
   source: string;
 }
@@ -23,8 +21,6 @@ export const submitToGoogleSheets = async (data: LeadData): Promise<void> => {
       timestamp: currentTime,
       name: data.name.trim(),
       phone: data.phone.trim(),
-      company: data.company.trim(),
-      message: data.message?.trim() || 'Не указано',
       source: data.source || 'landing_page',
       status: 'Новая заявка'
     };

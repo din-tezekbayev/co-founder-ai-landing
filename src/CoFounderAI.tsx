@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Play, Check, Users, TrendingUp, Zap, Target, Bot, Rocket } from 'lucide-react';
+import { Check, Users, TrendingUp, Zap, Target, Bot, Rocket } from 'lucide-react';
 import box from '@/assets/images/box.png';
 import LeadForm from './components/LeadForm';
 import { initGoogleAPI } from './services/googleSheets';
@@ -125,8 +125,6 @@ const CoFounderAI = () => {
           <nav className="hidden md:flex space-x-8">
             <a href="#section-problems" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">Проблемы</a>
             <a href="#section-solution" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">Решение</a>
-            <a href="#section-results" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">Результаты</a>
-            <a href="#section-pricing" className="text-gray-600 hover:text-gray-900 transition-colors font-medium">Цены</a>
           </nav>
           <a href="#section-form" className="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-semibold">
             Консультация
@@ -177,10 +175,6 @@ const CoFounderAI = () => {
                 <a href="#section-form" className="bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-700 transition-all transform hover:scale-105 font-montserrat">
                   Хочу результата
                 </a>
-                <button className="flex items-center space-x-2 text-gray-600 hover:text-gray-900 transition-colors font-inter font-medium">
-                  <Play className="w-5 h-5" />
-                  <span>Посмотреть как это работает</span>
-                </button>
               </div>
 
               {/* Centered AI Brain Visual */}
