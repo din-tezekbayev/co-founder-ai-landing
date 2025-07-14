@@ -104,7 +104,7 @@ const CoFounderAI = () => {
       description: "Менеджеры увольняются, новички сливают заявки. Вы тратите кучу денег, а получаете головную боль и мизерные результаты."
     },
     {
-      emoji: "😰",
+      emoji: "📉",
       title: "Боитесь масштабироваться, потому что не вывозите",
       description: "Хотите расти, но понимаете: команда не справится, нанимать новых — долго, дорого и снова хаос и просадка качества."
     }
@@ -133,16 +133,25 @@ const CoFounderAI = () => {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white relative overflow-hidden">
+      <section className="pt-24 pb-16 bg-gradient-to-br from-gray-50 to-white relative overflow-visible position-relative z-10">
         {/* Background decorative elements */}
-        <div className="absolute top-20 right-10 opacity-20">
-          <div className="text-6xl font-bold text-green-400 transform rotate-12">+ ₸2 000 000</div>
+        <div className="absolute w-1/3 top-2/5 right-0 opacity-70">
+          <div className="text-8xl font-bold text-green-400 transform rotate-45">
+            <img
+                id="box"
+                src={box}
+                alt="AI box"
+            />
+          </div>
         </div>
-        <div className="absolute bottom-40 left-10 opacity-20">
-          <div className="text-4xl font-bold text-green-400 transform -rotate-12">+ ₸5 000 000</div>
-        </div>
-        <div className="absolute top-1/2 right-1/4 opacity-10">
-          <div className="text-8xl font-bold text-green-400 transform rotate-45">₸</div>
+        <div className="absolute w-1/3 left-0 opacity-100" style={{ bottom: '-50px', left: '-10%' }}>
+          <div className="text-8xl font-bold text-green-400 transform rotate-45">
+            <img
+                id="box2"
+                src={box}
+                alt="AI box"
+            />
+          </div>
         </div>
 
         {/* AI Brain Image */}
@@ -154,7 +163,7 @@ const CoFounderAI = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-4 relative z-10">
-          <div className="flex flex-col items-center justify-center text-center min-h-[80vh]">
+          <div className="flex flex-col items-center justify-center text-center min-h-[30vh]">
             {/* Main Content */}
             <div className="max-w-4xl mx-auto">
               <h1 className="text-5xl md:text-6xl font-black text-gray-900 mb-6 leading-tight font-montserrat">
@@ -177,57 +186,6 @@ const CoFounderAI = () => {
                 </a>
               </div>
 
-              {/* Centered AI Brain Visual */}
-              <div className="relative flex justify-center mt-12">
-                <div className="relative">
-                  {/* Main AI Brain - Using the actual holographic brain */}
-                  <div className="w-96 h-96 relative flex items-center justify-center">
-                    {/* Placeholder for the holographic brain image */}
-                    <div className="w-80 h-80 relative">
-                      {/* This is where you'll replace with your actual brain image */}
-                      <div className="w-full h-full bg-gradient-to-br from-purple-500 via-blue-500 to-pink-500 opacity-80 rounded-full blur-sm animate-pulse"></div>
-                      <div className="absolute inset-4 bg-gradient-to-br from-purple-600 via-blue-600 to-pink-600 opacity-70 rounded-full blur-xs animate-pulse"></div>
-
-                      {/* Brain image */}
-                      <div className="absolute inset-0 flex items-center justify-center">
-                        <img
-                          id="brain"
-                          src={box}
-                          alt="AI Brain"
-                          className="w-full h-full object-contain animate-scale"
-                        />
-                      </div>
-                    </div>
-
-                    {/* Floating AI elements */}
-                    <div className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg animate-bounce">
-                      <Bot className="w-6 h-6 text-blue-600" />
-                    </div>
-                    <div className="absolute -bottom-4 -left-4 bg-white rounded-full p-3 shadow-lg animate-bounce" style={{animationDelay: '0.5s'}}>
-                      <Target className="w-6 h-6 text-purple-600" />
-                    </div>
-                    <div className="absolute top-1/2 -right-8 bg-white rounded-full p-3 shadow-lg animate-bounce" style={{animationDelay: '1s'}}>
-                      <Rocket className="w-6 h-6 text-pink-600" />
-                    </div>
-                  </div>
-
-                  {/* Orbital elements */}
-                  <div className="absolute inset-0 animate-spin" style={{animationDuration: '20s'}}>
-                    <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
-                      <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-                    </div>
-                    <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 translate-y-4">
-                      <div className="w-3 h-3 bg-purple-400 rounded-full animate-pulse"></div>
-                    </div>
-                    <div className="absolute top-1/2 right-0 transform translate-x-4 -translate-y-1/2">
-                      <div className="w-3 h-3 bg-pink-400 rounded-full animate-pulse"></div>
-                    </div>
-                    <div className="absolute top-1/2 left-0 transform -translate-x-4 -translate-y-1/2">
-                      <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -246,9 +204,6 @@ const CoFounderAI = () => {
             <h2 className="text-4xl font-black mb-4 font-montserrat text-white">
               Устали? Хотите больше денег<br />но по факту получаете это...
             </h2>
-            <p className="text-xl text-gray-300 font-inter">
-              И какой гарантированный результат вы получите после прохождения
-            </p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {problems.map((problem, index) => (
@@ -405,7 +360,7 @@ const CoFounderAI = () => {
               в 2 раза меньше?
             </h2>
             <p className="text-xl text-blue-200 opacity-90 font-inter font-medium max-w-3xl mx-auto">
-              Заполните форму ниже и наш менеджер свяжется с вами в течение 30 минут для персональной консультации
+              Заполните форму ниже и наш менеджер свяжется с вами в течение 10 минут для персональной консультации
             </p>
           </div>
 

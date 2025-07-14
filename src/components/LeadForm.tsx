@@ -96,9 +96,6 @@ const LeadForm = ({ className = '' }: LeadFormProps) => {
         <h3 className="text-3xl font-bold text-white mb-4 font-montserrat">
           Получите консультацию бесплатно
         </h3>
-        <p className="text-blue-200 text-lg">
-          Быстрая заявка — всего 2 поля! Менеджер свяжется с вами в течение 30 минут
-        </p>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
