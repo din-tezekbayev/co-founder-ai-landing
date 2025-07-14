@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Play, Check, Users, TrendingUp, Zap, Target, Bot, Rocket } from 'lucide-react';
-import fancyBrainImage from '@/assets/images/fansy-brain.png';
+import box from '@/assets/images/box.png';
 import LeadForm from './components/LeadForm';
 import { initGoogleAPI } from './services/googleSheets';
 
@@ -11,14 +11,14 @@ const FontLoader = () => {
     link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap';
     link.rel = 'stylesheet';
     document.head.appendChild(link);
-    
+
     return () => {
       if (document.head.contains(link)) {
         document.head.removeChild(link);
       }
     };
   }, []);
-  
+
   return null;
 };
 
@@ -99,13 +99,13 @@ const CoFounderAI = () => {
       description: "Вы вливаете бюджет в рекламу, заявки идут — но часто некачественные, слабо конвертятся. Отдел продаж не справляется: теряет, сливает, затягивает."
     },
     {
-      emoji: "😤", 
+      emoji: "😤",
       title: "Платите отделу продаж а он приносит стресс и текучку",
       description: "Менеджеры увольняются, новички сливают заявки. Вы тратите кучу денег, а получаете головную боль и мизерные результаты."
     },
     {
       emoji: "😰",
-      title: "Боитесь масштабироваться, потому что не вывозите", 
+      title: "Боитесь масштабироваться, потому что не вывозите",
       description: "Хотите расти, но понимаете: команда не справится, нанимать новых — долго, дорого и снова хаос и просадка качества."
     }
   ];
@@ -146,7 +146,7 @@ const CoFounderAI = () => {
         <div className="absolute top-1/2 right-1/4 opacity-10">
           <div className="text-8xl font-bold text-green-400 transform rotate-45">₸</div>
         </div>
-        
+
         {/* AI Brain Image */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 z-0">
           <div className="w-96 h-96 bg-gradient-to-br from-purple-400 via-blue-500 to-pink-400 rounded-full blur-3xl"></div>
@@ -154,7 +154,7 @@ const CoFounderAI = () => {
         <div className="absolute top-20 right-20 opacity-30 z-1">
           <div className="w-32 h-32 bg-gradient-to-br from-purple-400 via-blue-500 to-pink-400 rounded-full blur-xl animate-pulse"></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="flex flex-col items-center justify-center text-center min-h-[80vh]">
             {/* Main Content */}
@@ -171,8 +171,8 @@ const CoFounderAI = () => {
               <p className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed font-inter font-medium">
                 Мы берем полностью отделы продаж и маркетинга на себя
               </p>
-              
-              
+
+
               <div className="flex flex-col sm:flex-row gap-4 items-center justify-center">
                 <a href="#section-form" className="bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-700 transition-all transform hover:scale-105 font-montserrat">
                   Хочу результата
@@ -182,7 +182,7 @@ const CoFounderAI = () => {
                   <span>Посмотреть как это работает</span>
                 </button>
               </div>
-              
+
               {/* Centered AI Brain Visual */}
               <div className="relative flex justify-center mt-12">
                 <div className="relative">
@@ -193,18 +193,18 @@ const CoFounderAI = () => {
                       {/* This is where you'll replace with your actual brain image */}
                       <div className="w-full h-full bg-gradient-to-br from-purple-500 via-blue-500 to-pink-500 opacity-80 rounded-full blur-sm animate-pulse"></div>
                       <div className="absolute inset-4 bg-gradient-to-br from-purple-600 via-blue-600 to-pink-600 opacity-70 rounded-full blur-xs animate-pulse"></div>
-                      
+
                       {/* Brain image */}
                       <div className="absolute inset-0 flex items-center justify-center">
-                        <img 
+                        <img
                           id="brain"
-                          src={fancyBrainImage} 
-                          alt="AI Brain" 
-                          className="w-full h-full object-contain animate-scale" 
+                          src={box}
+                          alt="AI Brain"
+                          className="w-full h-full object-contain animate-scale"
                         />
                       </div>
                     </div>
-                    
+
                     {/* Floating AI elements */}
                     <div className="absolute -top-4 -right-4 bg-white rounded-full p-3 shadow-lg animate-bounce">
                       <Bot className="w-6 h-6 text-blue-600" />
@@ -216,7 +216,7 @@ const CoFounderAI = () => {
                       <Rocket className="w-6 h-6 text-pink-600" />
                     </div>
                   </div>
-                  
+
                   {/* Orbital elements */}
                   <div className="absolute inset-0 animate-spin" style={{animationDuration: '20s'}}>
                     <div className="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-4">
@@ -246,7 +246,7 @@ const CoFounderAI = () => {
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-20 left-20 text-9xl font-bold text-white transform rotate-12">КОМУ ПОДХОДИТ?</div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-black mb-4 font-montserrat text-white">
@@ -265,7 +265,7 @@ const CoFounderAI = () => {
               </div>
             ))}
           </div>
-          
+
           <div className="text-center mt-12">
             <a href="#section-form" className="bg-blue-600 text-white px-8 py-4 rounded-xl text-lg font-bold hover:bg-blue-700 transition-colors font-montserrat">
               Хочу результата
@@ -283,7 +283,7 @@ const CoFounderAI = () => {
         <div className="absolute bottom-20 left-10 opacity-10">
           <div className="text-4xl font-bold text-green-400 transform -rotate-12">на запусках за 1 месяц</div>
         </div>
-        
+
         {/* AI Brain Background */}
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 opacity-5 z-0">
           <div className="w-[600px] h-[600px] bg-gradient-to-br from-purple-400 via-blue-500 to-pink-400 rounded-full blur-3xl"></div>
@@ -294,16 +294,16 @@ const CoFounderAI = () => {
         <div className="absolute bottom-20 left-1/4 opacity-10 z-1">
           <div className="w-32 h-32 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-400 rounded-full blur-xl animate-pulse" style={{animationDelay: '1s'}}></div>
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 relative z-10">
           <div className="text-center mb-16">
             <div className="inline-flex items-center justify-center mb-6">
               <div className="relative">
                 {/* Smaller version of the holographic brain */}
                 <div className="w-16 h-16 relative flex items-center justify-center">
-                  <img 
+                  <img
                     src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400'%3E%3Cdefs%3E%3ClinearGradient id='smallBrain' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' stop-color='%23a855f7'/%3E%3Cstop offset='25%25' stop-color='%236366f1'/%3E%3Cstop offset='50%25' stop-color='%233b82f6'/%3E%3Cstop offset='75%25' stop-color='%23ec4899'/%3E%3Cstop offset='100%25' stop-color='%23a855f7'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M200 50c-30 0-55 20-65 45-15-10-35-15-55-10-25 8-45 30-50 60-3 20 2 40 15 55-10 15-15 35-10 55 8 25 30 45 60 50 20 3 40-2 55-15 15 10 35 15 55 10 25-8 45-30 50-60 3-20-2-40-15-55 10-15 15-35 10-55-8-25-30-45-60-50z' fill='url(%23smallBrain)' opacity='0.9'/%3E%3C/svg%3E"
-                    alt="AI Brain" 
+                    alt="AI Brain"
                     className="w-full h-full object-contain animate-pulse"
                   />
                 </div>
@@ -322,13 +322,13 @@ const CoFounderAI = () => {
               Мы создали систему, которая помогает бизнесам <span className="font-semibold text-gray-900">зарабатывать больше, тратя меньше</span>
             </p>
           </div>
-          
+
           <div className="grid lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <div key={index} className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transition-shadow relative overflow-hidden">
                 {/* Card background AI effect */}
                 <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-purple-400/20 to-blue-400/20 rounded-full blur-xl"></div>
-                
+
                 <div className="flex items-center mb-6 relative z-10">
                   <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg p-3 mr-4">
                     <feature.icon className="w-6 h-6 text-white" />
@@ -350,7 +350,7 @@ const CoFounderAI = () => {
               </div>
             ))}
           </div>
-          
+
           {/* Stats Section */}
           <div className="mt-16 py-16 bg-gray-900 rounded-2xl">
             <div className="max-w-6xl mx-auto px-8">
@@ -377,7 +377,7 @@ const CoFounderAI = () => {
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">CoFounder AI — это:</h2>
           </div>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { icon: "🔁", title: "Полная автоматизация", desc: "Воронки от клиента до продажи" },
@@ -402,7 +402,7 @@ const CoFounderAI = () => {
           <div className="absolute top-20 right-20 text-6xl font-bold transform rotate-12 text-white">СИСТЕМА БОЛЬШОГО ЗАПУСКА</div>
           <div className="absolute bottom-20 left-20 text-4xl font-bold transform -rotate-12 text-blue-300">РЕЗУЛЬТАТ ГАРАНТИРОВАН</div>
         </div>
-        
+
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
             <h2 className="text-4xl md:text-5xl font-black text-white mb-6 font-montserrat">
@@ -414,7 +414,7 @@ const CoFounderAI = () => {
               Заполните форму ниже и наш менеджер свяжется с вами в течение 30 минут для персональной консультации
             </p>
           </div>
-          
+
           <div className="max-w-2xl mx-auto">
             <LeadForm />
           </div>
