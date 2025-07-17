@@ -104,7 +104,7 @@ const ThankYouPage = () => {
                     <span className="text-white font-bold text-sm">1</span>
                   </div>
                   <p className="text-left">
-                    Наш менеджер свяжется с вами в течение <strong className="text-white">30 минут</strong> для консультации
+                    Наш менеджер проконсультирует вас <strong className="text-white">НЕМЕДЛЕННО</strong>
                   </p>
                 </div>
                 <div className="flex items-start gap-4">
