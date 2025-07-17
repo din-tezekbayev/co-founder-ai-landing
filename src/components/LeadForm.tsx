@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Send, User, Phone, Loader2 } from 'lucide-react';
-import { useNavigate } from 'react-router-dom';
 import { trackLead } from '../utils/facebookPixel';
 import { submitToGoogleSheets } from '../services/googleSheets';
 
@@ -14,7 +13,6 @@ interface LeadFormProps {
 }
 
 const LeadForm = ({ className = '' }: LeadFormProps) => {
-  const navigate = useNavigate();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     phone: ''
@@ -80,8 +78,9 @@ const LeadForm = ({ className = '' }: LeadFormProps) => {
         currency: 'USD'
       });
 
-      // Redirect to thank you page
-      navigate('/thank-you');
+      // Redirect to WhatsApp
+      const whatsappUrl = `https://wa.me/77058315777?text=Здравствуйте%21%20Я%20оставил%20заявку%20на%20сайте%20CoFounder%20AI.%20Меня%20зовут%20${encodeURIComponent(formData.name)}%2C%20мой%20телефон%20${encodeURIComponent(formData.phone)}`;
+      window.location.href = whatsappUrl;
     } catch (error) {
       console.error('Form submission error:', error);
       alert('Произошла ошибка при отправке формы. Попробуйте еще раз.');
@@ -157,6 +156,13 @@ const LeadForm = ({ className = '' }: LeadFormProps) => {
             </>
           )}
         </button>
+
+        {/* WhatsApp Redirect Notice */}
+        <div className="bg-green-500/10 border border-green-400/30 rounded-xl p-3 mb-4">
+          <p className="text-xs text-green-200 text-center">
+            ⚠️ После отправки формы вы будете перенаправлены в WhatsApp для связи с нашим менеджером
+          </p>
+        </div>
 
         {/* Privacy Notice */}
         <p className="text-xs text-blue-300 text-center">

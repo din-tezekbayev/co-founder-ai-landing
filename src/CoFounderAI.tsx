@@ -354,13 +354,13 @@ const CoFounderAI = () => {
 
         <div className="max-w-6xl mx-auto px-4 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-black text-white mb-6 font-montserrat">
+            <h2 className="text-2xl md:text-5xl font-black text-white mb-6 font-montserrat">
               Готовы масштабировать бизнес<br />
               в 5 раз быстрее и тратить<br />
               в 2 раза меньше?
             </h2>
             <p className="text-xl text-blue-200 opacity-90 font-inter font-medium max-w-3xl mx-auto">
-              Заполните форму ниже и наш менеджер свяжется с вами в течение 10 минут для персональной консультации
+              Заполните форму ниже и вы получите БЕСПЛАТНУЮ консультацию в маркетинге и продажах от наших экспертов.
             </p>
           </div>
 
