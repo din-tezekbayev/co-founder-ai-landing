@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { trackLead, waitForPixelLoad } from './utils/facebookPixel';
 
 const ThankYouPage = () => {
-  const [countdown, setCountdown] = useState(10);
+  const [countdown, setCountdown] = useState(1);
   const whatsappUrl = "https://wa.me/77058315777?text=Здравствуйте%21%20Я%20оставил%20заявку%20на%20сайте%20CoFounder%20AI";
 
   useEffect(() => {
