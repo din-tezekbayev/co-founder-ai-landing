@@ -1,13 +1,29 @@
 import { useEffect } from 'react';
 import { CheckCircle, ArrowLeft, Sparkles } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { trackLead, waitForPixelLoad } from './utils/facebookPixel';
 
 const ThankYouPage = () => {
   useEffect(() => {
-    // Track Facebook Pixel conversion event
-    if (typeof window !== 'undefined' && (window as any).fbq) {
-      (window as any).fbq('track', 'Lead');
-    }
+    // Track Facebook Pixel conversion event on thank you page
+    const trackThankYouPageLead = async () => {
+      console.log('[Thank You Page] Waiting for Facebook Pixel to load...');
+      const pixelLoaded = await waitForPixelLoad();
+
+      if (pixelLoaded) {
+        console.log('[Thank You Page] Facebook Pixel loaded, tracking Lead event');
+        trackLead({
+          content_name: 'Thank You Page Visit',
+          content_category: 'conversion',
+          value: 1,
+          currency: 'USD'
+        });
+      } else {
+        console.error('[Thank You Page] Facebook Pixel failed to load within timeout');
+      }
+    };
+
+    trackThankYouPageLead();
   }, []);
 
   return (
@@ -15,10 +31,10 @@ const ThankYouPage = () => {
       <div className="max-w-2xl mx-auto text-center">
         {/* Success Icon */}
         <div className="relative mb-8">
-          <div className="absolute inset-0 animate-pulse">
+          <div className="absolute inset-0 animate-pulse" style={{ top: '10vh' }}>
             <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-r from-green-400 to-emerald-500 opacity-20 blur-xl"></div>
           </div>
-          <div className="relative w-32 h-32 mx-auto bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center shadow-2xl">
+          <div className="relative mt-8 w-32 h-32 mx-auto bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center shadow-2xl">
             <CheckCircle className="w-16 h-16 text-white" />
           </div>
         </div>
@@ -85,8 +101,8 @@ const ThankYouPage = () => {
           <p className="text-blue-200">
             Пока ждете, можете изучить больше информации о CoFounder AI
           </p>
-          <Link 
-            to="/" 
+          <Link
+            to="/"
             className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-xl transition-all duration-300 backdrop-blur-lg border border-white/20 hover:border-white/40"
           >
             <ArrowLeft className="w-4 h-4" />
@@ -97,7 +113,7 @@ const ThankYouPage = () => {
         {/* Footer */}
         <div className="mt-12 pt-8 border-t border-white/20">
           <p className="text-blue-300 text-sm">
-            © 2024 CoFounder AI. Увеличиваем продажи с помощью искусственного интеллекта
+            © 2025 CoFounder AI. Увеличиваем продажи с помощью искусственного интеллекта
           </p>
         </div>
       </div>
