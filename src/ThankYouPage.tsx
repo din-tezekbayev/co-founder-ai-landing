@@ -1,9 +1,27 @@
-import { useEffect } from 'react';
-import { CheckCircle, ArrowLeft, Sparkles } from 'lucide-react';
+import { useEffect, useState } from 'react';
+import { CheckCircle, ArrowLeft, Sparkles, MessageCircle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { trackLead, waitForPixelLoad } from './utils/facebookPixel';
 
 const ThankYouPage = () => {
+  const [countdown, setCountdown] = useState(10);
+  const whatsappUrl = "https://wa.me/77058315777?text=Здравствуйте%21%20Я%20оставил%20заявку%20на%20сайте%20CoFounder%20AI";
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCountdown((prev) => {
+        if (prev <= 1) {
+          clearInterval(timer);
+          window.location.href = whatsappUrl;
+          return 0;
+        }
+        return prev - 1;
+      });
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, [whatsappUrl]);
+
   useEffect(() => {
     // Track Facebook Pixel conversion event on thank you page
     const trackThankYouPageLead = async () => {
@@ -60,6 +78,26 @@ const ThankYouPage = () => {
               <h2 className="text-2xl font-bold text-white mb-4 font-montserrat">
                 Что дальше?
               </h2>
+
+              {/* WhatsApp Redirect Notice */}
+              <div className="bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-400/30 rounded-2xl p-4 mb-6">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <MessageCircle className="w-5 h-5 text-green-400" />
+                  <p className="text-white font-semibold">
+                    Переходим к нашему менеджеру
+                  </p>
+                </div>
+                <p className="text-green-100 text-sm mb-3">
+                  Через <span className="font-bold text-green-300">{countdown}</span> секунд вы будете автоматически перенаправлены в WhatsApp к нашему менеджеру для быстрой консультации
+                </p>
+                <div className="w-full bg-white/10 rounded-full h-2">
+                  <div
+                    className="bg-gradient-to-r from-green-400 to-emerald-500 h-2 rounded-full transition-all duration-1000 ease-linear"
+                    style={{ width: `${((10 - countdown) / 10) * 100}%` }}
+                  ></div>
+                </div>
+              </div>
+
               <div className="space-y-4 text-blue-100">
                 <div className="flex items-start gap-4">
                   <div className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center flex-shrink-0 mt-1">
